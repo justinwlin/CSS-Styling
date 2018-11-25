@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Card.css';
-import 'bulma/css/bulma.min.css'
 
 const mapStateToProps = (state) => {
     return {
@@ -154,7 +153,7 @@ class ParticipantCard extends Component {
                 <div>
                     <input
                         onClick={this.toggle}
-                        className="button is-rounded"
+                        className="button"
                         type="submit"
                         value="Options"
                     />
@@ -254,7 +253,7 @@ class Expand extends Component {
                             <div className="buttons are small">
                                 <input
                                     onClick={this.onBeep}
-                                    className="button is-rounded is-danger"
+                                    className="button"
                                     type="submit"
                                     value="Turn On Recording"
                                 />
@@ -268,19 +267,19 @@ class Expand extends Component {
                 <div className="field is-grouped" id='center' >
                     <input
                         onClick={this.onChanceVoiceLow}
-                        className="button is-rounded"
+                        className="button"
                         type="submit"
                         value="Low"
                     />
                     <input
                         onClick={this.onChanceVoiceNormal}
-                        className="button is-rounded"
+                        className="button"
                         type="submit"
                         value="Normal"
                     />
                     <input
                         onClick={this.onChanceVoiceHigh}
-                        className="button is-rounded"
+                        className="button"
                         type="submit"
                         value="High"
                     />

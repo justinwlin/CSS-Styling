@@ -1,12 +1,3 @@
-.container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
-.columns {
-    padding: 20px 5px;
-}
-
 @font-face {
     font-family: 'Avenir';
     font-style: normal;
@@ -14,15 +5,21 @@
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
 }
 
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.columns {
+    padding: 20px 5px;
+    font-family: 'Avenir bold'
+}
+
 #center{
     display: flex;
     justify-content: center;
     align-items: center;
       
-}
-
-hr.toggle{
-    color: black;
 }
 
 #circle { 
@@ -39,3 +36,7 @@ hr.toggle{
     border-radius: 30px;
     
  }
+
+ hr.toggle{
+    color: black;
+}

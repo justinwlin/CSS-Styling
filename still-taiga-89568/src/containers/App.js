@@ -8,7 +8,6 @@ import './App.css';
 import Navbar from '../components/Navbar'
 import Header from '../components/Header'
 
-import 'bulma/css/bulma.min.css'
 
 let index = 0;
 const mapStateToProps = (state) => {
@@ -58,18 +57,18 @@ class App extends Component {
         <Navbar />
         <Header />
         <hr></hr>
-        <div className = 'level-item field is-grouped"'> 
+        <div> 
         <buttons>
           <input
                 onClick={this.myFunction}
-                className="button is-primary is-rounded"
+                className="button"
                 id = "buttonColor"
                 type="submit"
                 value="Pass Microphone"
               />
 
               <input
-                className="button is-rounded"
+                className="button"
                 type="submit"
                 value="Make an Announcement"
               />

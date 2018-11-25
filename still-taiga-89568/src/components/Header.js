@@ -10,8 +10,12 @@ class Header extends Component {
         Headings
         */
         <div>
-          <div>Tech Demo Session</div>
-          <div>Month Day ; Time:Time</div>
+          <div className = 'mainHeader'>
+            I eat too much when I am sad
+            </div>
+          <div className = 'subHeader'>
+            Wednesday, Nov 18, 2018
+          </div>
           <div>  </div>
         </div>
       )

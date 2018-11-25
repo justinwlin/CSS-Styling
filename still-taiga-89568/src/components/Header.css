@@ -1,11 +1,21 @@
 @font-face {
     font-family: 'Avenir';
     font-style: normal;
-    font-weight: normal;
+    font-weight: bold;
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
     }
 
-#test{
+.mainHeader{
+    font-family: 'Avenir';
     padding: 10px 300px;
     color: #577082;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+.subHeader{
+    font-family: 'Avenir';
+    padding: 10px 300px;
+    color:lightslategray;
+    font-size: 18px;
 }
