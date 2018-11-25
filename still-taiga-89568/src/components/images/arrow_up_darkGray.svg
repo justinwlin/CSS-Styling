@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="9px" viewBox="0 0 14 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="301" height="203" rx="5"></rect>
+        <filter x="-2.3%" y="-2.5%" width="104.7%" height="106.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Mockups---Basic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Session-admin---managing-a-call---minimalist---edit-user" transform="translate(-843.000000, -531.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="900"></rect>
+            <g id="Group-6" transform="translate(584.000000, 393.000000)" stroke="#666666" stroke-width="2">
+                <g id="Group-2-Copy" transform="translate(0.000000, 130.000000)">
+                    <polyline id="Path-4" transform="translate(266.000000, 13.000000) scale(1, -1) translate(-266.000000, -13.000000) " points="260 10 266 16 272 10"></polyline>
+                </g>
+            </g>
+            <rect id="overlay" fill-opacity="0.3" fill="#577083" x="0" y="257" width="1440" height="644"></rect>
+            <g id="edit-user" transform="translate(572.000000, 512.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="Group-2-Copy" transform="translate(12.000000, 11.000000)" stroke="#666666" stroke-width="2">
+                    <polyline id="Path-4" transform="translate(266.000000, 13.000000) scale(1, -1) translate(-266.000000, -13.000000) " points="260 10 266 16 272 10"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

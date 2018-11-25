@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
+    }
+
+#test{
+    padding: 10px 300px;
+    color: #577082;
+}

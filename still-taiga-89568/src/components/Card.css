@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.columns {
+    padding: 20px 5px;
+}
+
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
+}
+
+#center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      
+}
+
+hr.toggle{
+    color: black;
+}
+
+#circle { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    background: #577082; 
+    color: white;
+    -moz-border-radius: 30px; 
+    -webkit-border-radius: 30px; 
+    border-radius: 30px;
+    
+ }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="5px" viewBox="0 0 8 5" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="301" height="203" rx="5"></rect>
+        <filter x="-2.3%" y="-2.5%" width="104.7%" height="106.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="2" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Mockups---Basic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Session-admin---managing-a-call---minimalist---edit-user" transform="translate(-781.000000, -670.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="900"></rect>
+            <g id="Group-6" transform="translate(584.000000, 393.000000)" fill="#666666" font-family="Avenir-Book, Avenir" font-size="16" font-weight="normal">
+                <g id="Group-2-Copy-3" transform="translate(0.000000, 259.000000)">
+                    <text id="Alley">
+                        <tspan x="47" y="19">Alley</tspan>
+                    </text>
+                </g>
+            </g>
+            <rect id="overlay" fill-opacity="0.3" fill="#577083" x="0" y="257" width="1440" height="644"></rect>
+            <g id="edit-user" transform="translate(572.000000, 512.000000)">
+                <g id="Rectangle">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                    <use fill="#FFFFFF" fill-rule="evenodd" xlink:href="#path-1"></use>
+                </g>
+                <g id="input_select" transform="translate(59.000000, 140.000000)">
+                    <rect id="input" stroke="#DCDFE6" fill="#FFFFFF" x="0.5" y="0.5" width="167" height="39" rx="4"></rect>
+                    <g id="select" fill="#577083" fill-opacity="0.5">
+                        <polygon id="icon_arrow" points="150 18 154 23 158 18"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

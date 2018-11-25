@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="8px" viewBox="0 0 12 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>Path 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Mockups---Basic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Session-admin---managing-a-call---minimalist" transform="translate(-1227.000000, -34.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="900"></rect>
+            <g id="nav" fill="#FDFDFD">
+                <rect x="0" y="0" width="1440" height="64"></rect>
+            </g>
+            <g id="Group" transform="translate(1196.000000, 20.000000)" stroke="#CCCCCC" stroke-width="2">
+                <polyline id="Path-2" points="32 15 37 20 42 15"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
