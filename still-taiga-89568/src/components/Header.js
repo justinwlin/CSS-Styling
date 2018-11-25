@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import 'bulma/css/bulma.min.css'
 import './Header.css'
 
 class Header extends Component {
