@@ -6,6 +6,9 @@ class Header extends Component {
     render() {
         
       return (
+        /*
+        Headings
+        */
         <div>
           <div>Tech Demo Session</div>
           <div>Month Day ; Time:Time</div>

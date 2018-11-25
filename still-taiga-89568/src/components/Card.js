@@ -124,13 +124,33 @@ class ParticipantCard extends Component {
     render() {
         return (
             <div>
+                {
+                    /*
+                    WHAT NEEDS TO BE STYLED
+                    */
+                }
                 <div className='container'>
                 <div>
                 </div>
                 <div>&nbsp;&nbsp;</div>
+                {
+                    /*
+                    Circle Number
+                    */
+                }
                 <div id = 'circle'> {this.state.id} </div>
                 <div>&nbsp;&nbsp;</div>
+                {
+                    /*
+                    Phone Number
+                    */
+                }
                 <div>{this.state.phone}</div>
+                {
+                    /*
+                    Options Button
+                    */
+                }
                 <div>
                     <input
                         onClick={this.toggle}
@@ -139,6 +159,11 @@ class ParticipantCard extends Component {
                         value="Options"
                     />
                     </div>
+                    {
+                    /*
+                    Blue Mic
+                    */
+                    }
                     {this.state.id == this.state.speakerIndex && <img src={ require('./images/mic_brightBlue.png') } />}
                 </div>
                 {this.state.show && <Expand sid={this.state.personalSID} id = {this.state.id}/>}
