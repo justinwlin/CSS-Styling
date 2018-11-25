@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "bulma": "^0.7.2",
     "react": "^16.6.3",
     "react-collapse": "^4.0.3",
     "react-compound-timer": "^1.0.7",
