@@ -64,7 +64,7 @@ class App extends Component {
                 className="button"
                 id = "buttonColor"
                 type="submit"
-                value="Pass Microphone"
+                value="Pass the Microphone"
               />
 
               <input
