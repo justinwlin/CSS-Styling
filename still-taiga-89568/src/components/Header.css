@@ -3,9 +3,9 @@
     font-style: normal;
     font-weight: bold;
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
-    }
+}
 
-.mainHeader{
+.mainheader {
     font-family: 'Avenir';
     padding: 10px 300px;
     color: #577082;
@@ -13,13 +13,37 @@
     font-size: 40px;
 }
 
-.subHeader{
+.subheader {
     font-family: 'Avenir';
     padding: 10px 300px;
-    color:lightslategray;
+    color: lightslategray;
     font-size: 18px;
 }
 
-.button {
+.header-session {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+}
 
+.header-session p {
+    font-size: 1.2rem;
+}
+
+.header-session p:first-child {
+    color: rgba(0, 0, 0, 0.712);
+}
+
+.header-session p:last-child {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.plus-button {
+    background-color: #0ccfcf;
+    border: 1px solid #20b5ba;
+    color: white;
+    border-radius: 50%;
+    padding: 0px 5px;
 }

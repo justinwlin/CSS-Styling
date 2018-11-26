@@ -45,10 +45,6 @@
     margin-right: 10px;
 }
 
-hr.toggle {
-    color: black;
-}
-
 #caret {
     cursor: pointer;
     color: rgb(41, 41, 41);
