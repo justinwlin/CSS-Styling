@@ -24,6 +24,15 @@
     margin: 30px auto;
 }
 
+.timer {
+    font-family: 'Avenir';
+    margin-top: 17px;
+    margin-left: 10px;
+
+    font-weight: bolder;
+    color: #666666;
+    font-size: 2rem;
+}
 #circle {
     display: flex;
     justify-content: center;
@@ -49,6 +58,13 @@
     margin-right: 10px;
     display: flex;
     align-items: center;
+}
+
+.timer {
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
 }
 
 #caret {
@@ -93,3 +109,5 @@
     -moz-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.23);
     box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.23);
 }
+
+

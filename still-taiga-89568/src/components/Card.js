@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Card.css';
 
+
 const mapStateToProps = state => {
   return {
     index: state.searchRobots.index
@@ -26,7 +27,8 @@ class ParticipantCard extends Component {
       adminTxt: '',
       speakerIndex: this.props.index,
 
-      show: false
+      show: false, 
+      timer: false
     };
     this.toggle = this.toggle.bind(this);
   }
@@ -83,7 +85,6 @@ class ParticipantCard extends Component {
   }
 
   onBeep = () => {
-    const { index } = this.props;
     console.log(this.props.index);
     this.setState({ speakerIndex: this.props.index });
     if (this.state.beepTxt === 'Beep') {
@@ -116,11 +117,17 @@ class ParticipantCard extends Component {
     this.setState({ show: !show });
   }
 
+  toggleTimer() {
+    console.log("TIMER ON!");
+    const { timer } = this.state;
+    this.setState({ timer: !timer});
+  }
+
   render() {
     return (
       <div>
         <div class="caller">
-          <div id="circle"> {this.state.id} </div>
+          <div id="circle"> {(this.state.id + 1)} </div>
           <div className="phone-number">{this.state.phone}</div>
           <div class="filler-info">
             <img src={require('./images/Dot.png')} />
@@ -128,6 +135,7 @@ class ParticipantCard extends Component {
               v
             </span>
           </div>
+
           {this.state.id == this.state.speakerIndex && (
             <img src={require('./images/mic_brightBlue.png')} />
           )}

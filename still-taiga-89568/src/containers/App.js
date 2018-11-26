@@ -7,6 +7,7 @@ import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 import Navbar from '../components/Navbar';
 import Header from '../components/Header';
+import Timer from 'react-compound-timer';
 
 let index = 0;
 const mapStateToProps = state => {
@@ -35,6 +36,12 @@ const mapDispatchToProps = dispatch => {
 };
 
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      timer: true
+    }
+  }
   componentDidMount() {
     this.props.onRequestRobots();
   }
@@ -44,7 +51,17 @@ class App extends Component {
     console.log('Test');
     onIndexIncrement();
     onRefresh();
+    this.setState({timer: false});
   };
+
+     loginButton = (func) => {
+      if (!this.state.timer){
+        console.log("Test2");
+        func()
+        this.setState({timer: true});
+      }
+    }
+
 
   render() {
     const { robots, searchField, isPending, speakerIndex } = this.props;
@@ -55,6 +72,34 @@ class App extends Component {
       <div className="tc">
         <Navbar />
         <Header />
+
+      <div className = 'timerNumber'>
+      <Timer
+          initialTime={0}
+          
+        >
+          { 
+            ({ reset, pause, start }) => (
+            <React.Fragment>
+              <div>
+                <Timer.Minutes /> minutes 	&nbsp;
+                <Timer.Seconds /> seconds
+            </div>
+              <br />
+              <div>
+                <button className = "timerButtons" onClick={start}>Start</button>
+                <button className = "timerButtons" onClick={pause}>Pause</button>
+                <button className = "timerButtons" onClick={reset}>Reset</button>
+              </div>
+              {this.loginButton(reset)}
+            </React.Fragment>
+
+          )}
+        </Timer>
+      </div>
+        
+
+
         <hr />
         <div>
           <buttons class="buttons">
@@ -75,10 +120,10 @@ class App extends Component {
         {isPending ? (
           <h1>Loading</h1>
         ) : (
-          <ErrorBoundry>
-            <CardList robots={filteredRobots} speakerindex={speakerIndex} />
-          </ErrorBoundry>
-        )}
+            <ErrorBoundry>
+              <CardList robots={filteredRobots} speakerindex={speakerIndex} />
+            </ErrorBoundry>
+          )}
       </div>
     );
   }
