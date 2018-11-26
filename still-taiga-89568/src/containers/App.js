@@ -58,20 +58,17 @@ class App extends Component {
         <hr />
         <div>
           <buttons class="buttons">
-            <input
+            <button
               onClick={this.myFunction}
               className="button"
               id="pass-button"
-              type="submit"
-              value="Pass the Microphone"
-            />
+            >
+              Pass the Microphone
+            </button>
 
-            <input
-              className="button"
-              id="announcement-button"
-              type="submit"
-              value="Make an Announcement"
-            />
+            <button className="button" id="announcement-button">
+              Make an Announcement
+            </button>
           </buttons>
         </div>
 

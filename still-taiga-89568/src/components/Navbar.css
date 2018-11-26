@@ -1,3 +1,67 @@
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: bold;
+    src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
+}
+
+.navbar {
+    background-color: rgba(253, 253, 253, 0.972);
+    font-family: 'Avenir';
+}
+
+.navbar-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
 .wordmark {
-  color: #dde640;
+    color: #dde640;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-links a {
+    margin: 0 20px;
+    color: rgb(134, 134, 134);
+    text-decoration: none;
+}
+
+.navbar-dropdown {
+    cursor: pointer;
+}
+
+.navbar-user-bubble {
+    color: white;
+    background-color: rgb(88, 100, 109);
+    border-radius: 50%;
+    padding: 5px;
+    font-weight: bold;
+}
+
+ /* .caret {
+  margin-left: 5px;
+  color: rgba(0 ,0, 0, 0.4);
+  font-weight: bold;
+} */
+
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
 }
