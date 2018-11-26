@@ -163,7 +163,11 @@ class ParticipantCard extends Component {
                     Blue Mic
                     */
                     }
-                    {this.state.id == this.state.speakerIndex && <img src={ require('./images/mic_brightBlue.png') } />}
+                    <img src={ require('./images/Dot.png') } />
+                    {this.state.id == this.state.speakerIndex && 
+                    <img src={ require('./images/mic_brightBlue.png') } />}
+                    {this.state.id != this.state.speakerIndex && 
+                    <img src={ require('./images/Untitled.png') } />}
                 </div>
                 {this.state.show && <Expand sid={this.state.personalSID} id = {this.state.id}/>}
             </div>
