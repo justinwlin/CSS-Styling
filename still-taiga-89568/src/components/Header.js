@@ -5,8 +5,8 @@ class Header extends Component {
   render() {
     return (
       <div className="header">
-        <p className="mainheader">I eat too much when I am sad</p>
-        <p className="subheader">Wednesday, Nov 18, 2018</p>
+        <p className="header-main">I eat too much when I am sad</p>
+        <p className="header-sub">Wednesday, Nov 18, 2018</p>
         <div className="header-session">
           <p>10 people currently in this session</p>
           <p>

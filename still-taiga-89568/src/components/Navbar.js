@@ -12,7 +12,7 @@ class Navbar extends Component {
             <a href="#">Messages</a>
             <a href="#">Notifications</a>
             <div className="navbar-dropdown">
-              <span className="navbar-user-bubble">D</span>
+              <div className="navbar-user-bubble">D</div>
               <span className="caret" />
             </div>
           </div>

@@ -9,14 +9,23 @@
     font-family: 'Avenir';
 }
 
-.mainheader {
+/* .header-main {
+    display: flex;
+} */
+
+
+
+.header-main {
+    align-self: center;
+    justify-self: center;
     margin-top: 30px;
     color: #577082;
     font-weight: bolder;
     font-size: 3rem;
+    font-family: 'Arial';
 }
 
-.subheader {
+.header-sub {
     padding: 10px 300px;
     color: lightslategray;
     font-size: 18px;
@@ -43,9 +52,13 @@
 }
 
 .plus-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background-color: #0ccfcf;
     border: 1px solid #20b5ba;
     color: white;
     border-radius: 50%;
-    padding: 0px 5px;
+    height: 20px;
+    width: 20px;
 }
