@@ -214,13 +214,13 @@ class Expand extends Component {
 
   render() {
     return (
-      <div>
+      <div class="user-card">
         <div>Participant {this.state.id} Setting</div>
         <div className="columns">
           <field className="center">
             <div className="buttons" id="center">
               <button onClick={this.onBeep} className="recording-button">
-                Turn on Recording
+                Recording
               </button>
             </div>
           </field>

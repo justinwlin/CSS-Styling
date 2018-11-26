@@ -14,7 +14,6 @@
 } */
 
 
-
 .header-main {
     align-self: center;
     justify-self: center;
@@ -29,6 +28,7 @@
     padding: 10px 300px;
     color: lightslategray;
     font-size: 18px;
+    font-family: 'Avenir';
 }
 
 .header-session {
