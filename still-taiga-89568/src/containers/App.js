@@ -5,35 +5,34 @@ import { setSearchField, requestRobots, incrementIndex } from '../actions';
 import CardList from '../components/CardList';
 import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
-import Navbar from '../components/Navbar'
-import Header from '../components/Header'
-
+import Navbar from '../components/Navbar';
+import Header from '../components/Header';
 
 let index = 0;
-const mapStateToProps = (state) => {
-  index = state.searchRobots.index + 1
+const mapStateToProps = state => {
+  index = state.searchRobots.index + 1;
   if (index >= state.requestRobots.robots.length) {
-    index = 0
+    index = 0;
   }
   return {
     searchField: state.searchRobots.searchField,
     robots: state.requestRobots.robots,
     isPending: state.requestRobots.isPending,
     speakerIndex: state.searchRobots.index
-  }
-}
+  };
+};
 
 // dispatch the DOM changes to call an action. note mapStateToProps returns object, mapDispatchToProps returns function
 // the function returns an object then uses connect to change the data from redecers.
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    onSearchChange: (event) => dispatch(setSearchField(event.target.value)),
+    onSearchChange: event => dispatch(setSearchField(event.target.value)),
     onRequestRobots: () => dispatch(requestRobots()),
     onIndexIncrement: () => dispatch(incrementIndex(index)),
-    onRefresh: () => dispatch(setSearchField("")),
-  }
-}
+    onRefresh: () => dispatch(setSearchField(''))
+  };
+};
 
 class App extends Component {
   componentDidMount() {
@@ -42,49 +41,54 @@ class App extends Component {
 
   myFunction = () => {
     const { onIndexIncrement, onRefresh } = this.props;
-    console.log("Test");
+    console.log('Test');
     onIndexIncrement();
     onRefresh();
-  }
+  };
 
   render() {
     const { robots, searchField, isPending, speakerIndex } = this.props;
     const filteredRobots = robots.filter(robot => {
       return robot.phone.includes(searchField);
-    })
+    });
     return (
-      <div className='tc'>
+      <div className="tc">
         <Navbar />
         <Header />
-        <hr></hr>
-        <div> 
-        <buttons>
-          <input
-                onClick={this.myFunction}
-                className="button"
-                id = "buttonColor"
-                type="submit"
-                value="Pass the Microphone"
-              />
+        <hr />
+        <div>
+          <buttons class="buttons">
+            <input
+              onClick={this.myFunction}
+              className="button"
+              id="pass-button"
+              type="submit"
+              value="Pass the Microphone"
+            />
 
-              <input
-                className="button"
-                type="submit"
-                value="Make an Announcement"
-              />
-        </buttons>
+            <input
+              className="button"
+              id="announcement-button"
+              type="submit"
+              value="Make an Announcement"
+            />
+          </buttons>
         </div>
 
-            {isPending ? <h1>Loading</h1> :
-              <ErrorBoundry>
-                <CardList robots={filteredRobots} speakerindex={speakerIndex} />
-              </ErrorBoundry>
-
-            }
-          </div>
+        {isPending ? (
+          <h1>Loading</h1>
+        ) : (
+          <ErrorBoundry>
+            <CardList robots={filteredRobots} speakerindex={speakerIndex} />
+          </ErrorBoundry>
+        )}
+      </div>
     );
   }
 }
 
 // action done from mapDispatchToProps will channge state from mapStateToProps
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App);

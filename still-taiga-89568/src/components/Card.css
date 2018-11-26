@@ -5,38 +5,77 @@
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
 }
 
-.container{
-    display: flex;
-    justify-content: center;
-    align-content: center;
-}
 .columns {
-    padding: 20px 5px;
-    font-family: 'Avenir bold'
+    font-family: 'Avenir bold';
 }
 
-#center{
+#center {
     display: flex;
     justify-content: center;
     align-items: center;
-      
 }
 
-#circle { 
+.caller {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 25%;
+    margin: 20px auto;
+}
+
+#circle {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
     width: 30px;
     height: 30px;
-    background: #577082; 
+    background: #577082;
     color: white;
-    -moz-border-radius: 30px; 
-    -webkit-border-radius: 30px; 
-    border-radius: 30px;
-    
- }
+    border-radius: 50%;
+}
 
- hr.toggle{
+.phone-number {
+    flex-basis: 60%;
+    text-align: left;
+}
+
+.filler-info {
+    margin-right: 10px;
+}
+
+hr.toggle {
     color: black;
+}
+
+#caret {
+    cursor: pointer;
+    color: rgb(41, 41, 41);
+    font-size: 1.5rem;
+    flex-basis: 1;
+}
+
+.recording-button {
+    background-color: #ff3860;
+    border-color: transparent;
+    color: white;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    padding: 5px 15px;
+    height: 2.5em;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-buttons:last-child {
+    margin-right: 0;
+}
+
+.volume-button {
+    padding: 8px;
+    border-radius: 15px;
+    margin-right: 5px;
+    outline: none;
+    cursor: pointer;
 }
