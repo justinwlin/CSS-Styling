@@ -5,9 +5,11 @@
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
 }
 
-.columns {
-    font-family: 'Avenir bold';
+.caller, button {
+    font-family: 'Avenir';
 }
+
+
 
 #center {
     display: flex;
@@ -39,6 +41,9 @@
 .phone-number {
     flex-basis: 60%;
     text-align: left;
+    font-weight: bolder;
+    color: #666666;
+    font-size: 1.2rem;
 }
 
 .filler-info {
