@@ -39,6 +39,7 @@ button {
 }
 
 .circle {
+    font-family: 'Avenir-Black', arial, sans-serif;
     display: inline-block;
     align-items: center;
     width: 30px;
@@ -115,6 +116,12 @@ button {
 
 .active .phone-number {
     color: #0BCED0;
+    font-family: 'Avenir-Black', arial, sans-serif;
+    font-weight: bold;
+}
+
+.active .circle {
+    background-color: #0BCED0;   
 }
 
 .recordingDot {

@@ -11,19 +11,22 @@
 }
 
 .navbar-items {
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    height: 4rem;
     width: 80%;
     margin: 0 auto;
+    height: 60px;
 }
 
 .wordmark {
     color: #dde640;
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Avenir';
+    font-size: 25px;
+    font-family: 'Avenir-Black', arial, sans-serif;
+    letter-spacing: 1.5px;
 }
 
 .navbar-links {
@@ -49,12 +52,13 @@
     font-weight: bold;
     height: 25px;
     width: 25px;
+    line-height: 25px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
 }
 
- /* .caret {
+/* .caret {
   margin-left: 5px;
   color: rgba(0 ,0, 0, 0.4);
   font-weight: bold;

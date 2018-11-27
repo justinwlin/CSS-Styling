@@ -7,12 +7,12 @@ class Header extends Component {
       <div className="header">
         <p className="header-main">I eat too much when I am sad</p>
         <p className="header-sub">Wednesday, Nov 18, 2018</p>
-        <div className="header-session">
+        {/*<div className="header-session">
           <p>Welcome to Session</p>
           <p>
             Invite Participants <span className="plus-button">+</span>
           </p>
-        </div>
+        </div>*/}
       </div>
     );
   }

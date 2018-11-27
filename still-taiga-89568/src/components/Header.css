@@ -20,15 +20,15 @@
     margin-top: 30px;
     color: #577082;
     font-weight: bolder;
-    font-size: 3rem;
-    font-family: 'Arial';
+    font-size: 32px;
+    font-family: 'Avenir-Black', arial, sans-serif;
 }
 
 .header-sub {
-    padding: 10px 300px;
-    color: lightslategray;
-    font-size: 18px;
-    font-family: 'Avenir';
+    color: #666666;
+    font-size: 16px;
+    font-family: 'Avenir', arial, sans-serif;
+    margin: 20px 0 40px 0;
 }
 
 .header-session {
