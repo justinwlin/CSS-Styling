@@ -5,23 +5,27 @@
     src: local('Avenir'), url('../containers/Avenir.woff') format('woff');
 }
 
-.caller, button {
+.caller,
+button {
     font-family: 'Avenir';
 }
 
-#center {
+/*#center {
     display: flex;
     justify-content: center;
     align-items: center;
+}*/
+
+.callerContainer {
+    position: relative;
+    width: 330px;
+    margin: 0 auto;
 }
 
 .caller {
-    display: flex;
-    justify-content: space-between;
-    align-content: center;
-    align-items: center;
-    width: 18%;
+    width: 330px;
     margin: 30px auto;
+    display: block;
 }
 
 .timer {
@@ -33,30 +37,28 @@
     color: #666666;
     font-size: 2rem;
 }
-#circle {
-    display: flex;
-    justify-content: center;
+
+.circle {
+    display: inline-block;
     align-items: center;
-    font-weight: bold;
     width: 30px;
     height: 30px;
+    line-height: 30px;
     background: #577082;
     color: white;
     border-radius: 50%;
-    margin-right: 10px;
 }
 
 .phone-number {
-    flex-basis: 60%;
+    display: inline-block;
     text-align: left;
-    font-weight: bolder;
     color: #666666;
-    font-size: 1.2rem;
+    font-size: 16px;
+    margin: 0 40px 0 10px;
 }
 
 .filler-info {
-    margin-right: 10px;
-    display: flex;
+    display: inline-block;
     align-items: center;
 }
 
@@ -105,9 +107,55 @@
     border-radius: 5px;
     padding: 10px;
     margin: 0 auto;
-    -webkit-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.23);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.23);
-    box-shadow: 0px 0px 20px 3px rgba(0,0,0,0.23);
+    -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
+    -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
+    box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
 }
 
 
+.active .phone-number {
+    color: #0BCED0;
+}
+
+.recordingDot {
+    height: 8px;
+    width: 8px;
+    margin-right: 15px;
+    display: inline-block;
+    background-color: #D470CC;
+    border-radius: 50%;
+}
+
+.timerButtons {
+    border-radius: 10px;
+    font-family: 'Avenir';
+    font-size: 1rem;
+    outline: none;
+    cursor: pointer;
+    color: #666666;
+    font-weight: bolder;
+}
+
+.micAndTimer {
+    position: absolute;
+    display: block;
+    min-width: 100px;
+    right: -80px;
+    top: 0;
+}
+
+.timerNumber {
+    font-family: 'Avenir-Black', arial, sans-serif;
+    color: #0BCED0;
+    font-size: 14px;
+    outline: none;
+    width: auto;
+    text-align: left;
+    margin: 0px 15px;
+    display: inline-block;
+}
+
+.micIcon {
+    display: inline-block;
+
+}

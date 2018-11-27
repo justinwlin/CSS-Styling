@@ -54,13 +54,13 @@ class App extends Component {
     this.setState({timer: false});
   };
 
-     loginButton = (func) => {
-      if (!this.state.timer){
-        console.log("Test2");
-        func()
-        this.setState({timer: true});
-      }
-    }
+    //  loginButton = (func) => {
+    //   if (!this.state.timer){
+    //     console.log("Test2");
+    //     func()
+    //     this.setState({timer: true});
+    //   }
+    // }
 
 
   render() {
@@ -73,7 +73,7 @@ class App extends Component {
         <Navbar />
         <Header />
 
-      <div className = 'timerNumber'>
+{/*      <div className = 'timerNumber'>
       <Timer
           initialTime={0}
           
@@ -96,7 +96,7 @@ class App extends Component {
 
           )}
         </Timer>
-      </div>
+      </div>*/}
         
 
 

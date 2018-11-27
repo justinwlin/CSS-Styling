@@ -50,22 +50,3 @@ button {
     border: 1px solid #b5bfc7;
     background-color: white;
 }
-
-.timerButtons{
-    border-radius: 10px;
-    font-family: 'Avenir';
-    font-size: 1rem;
-    outline: none;
-    cursor: pointer;
-    color: #666666;
-    font-weight: bolder;
-}
-
-.timerNumber{
-    font-family: 'Avenir';
-    font-size: 1rem;
-    outline: none;
-    color: #666666;
-    font-weight: bolder;
-}
-

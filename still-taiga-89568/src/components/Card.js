@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './Card.css';
+import Timer from 'react-compound-timer';
 
 
 const mapStateToProps = state => {
@@ -124,29 +125,36 @@ class ParticipantCard extends Component {
   }
 
   render() {
+
+    const isActiveSpeaker = this.state.id == this.state.speakerIndex;
+    let micAndTimer;
+    if (isActiveSpeaker) {
+      micAndTimer = <div class="micAndTimer">
+            <div class="micIcon">
+              <img src={require('./images/mic_brightBlue.png')} />
+            </div>
+            <div className = 'timerNumber'>
+              <Timer initialTime={0}>
+                <Timer.Minutes />:<Timer.Seconds /> 
+              </Timer>
+            </div>
+          </div>;
+    }
+
     return (
-      <div>
+      <div class={`callerContainer ${isActiveSpeaker ? 'active' : ''}`}>
         <div class="caller">
-          <div id="circle"> {(this.state.id + 1)} </div>
+          <div class="circle"> {(this.state.id + 1)} </div>
           <div className="phone-number">{this.state.phone}</div>
           <div class="filler-info">
-            <img src={require('./images/Dot.png')} />
-            <span onClick={this.toggle} id="caret">
-              v
-            </span>
+            <div class="recordingDot"></div>
+            <span onClick={this.toggle} class="caret"></span>
           </div>
-
-          {this.state.id == this.state.speakerIndex && (
-            <img src={require('./images/mic_brightBlue.png')} />
-          )}
-          {this.state.id != this.state.speakerIndex && (
-            <img src={require('./images/Untitled.png')} />
-          )}
         </div>
-
         {this.state.show && (
           <Expand sid={this.state.personalSID} id={this.state.id} />
         )}
+        {micAndTimer}
       </div>
     );
   }
@@ -226,7 +234,7 @@ class Expand extends Component {
         <div>Participant {this.state.id} Setting</div>
         <div className="columns">
           <field className="center">
-            <div className="buttons" id="center">
+            <div className="buttons">
               <button onClick={this.onBeep} className="recording-button">
                 Recording
               </button>
