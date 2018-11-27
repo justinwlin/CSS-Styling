@@ -18,14 +18,20 @@ button {
 
 .callerContainer {
     position: relative;
-    width: 330px;
+    width: 300px;
     margin: 0 auto;
 }
 
 .caller {
-    width: 330px;
+    width: 300px;
     margin: 30px auto;
     display: block;
+    text-align: left;
+    position: relative;
+}
+
+.active .caller {
+    z-index: 999;
 }
 
 .timer {
@@ -45,9 +51,10 @@ button {
     width: 30px;
     height: 30px;
     line-height: 30px;
-    background: #577082;
+    background: #666;
     color: white;
     border-radius: 50%;
+    text-align: center;
 }
 
 .phone-number {
@@ -56,6 +63,7 @@ button {
     color: #666666;
     font-size: 16px;
     margin: 0 40px 0 10px;
+    width: 120px;
 }
 
 .filler-info {
@@ -78,15 +86,15 @@ button {
 }
 
 .recording-button {
-    background-color: #ff3860;
-    border-color: transparent;
-    color: white;
+    background-color: transparent;
+    border-color: #666;
+    color: #666;
     border-radius: 20px;
-    font-size: 1.2rem;
-    padding: 5px 15px;
-    height: 2.5em;
-    outline: none;
+    font-size: 16px;
+    padding: 10px 20px;
+    height: auto;
     cursor: pointer;
+    outline: none;
 }
 
 .volume-buttons:last-child {
@@ -102,26 +110,36 @@ button {
 }
 
 .user-card {
-    /* border: 1px solid black; */
+    text-align: left;
+    position: absolute;
+    z-index: 9;
+    top: -15px;
+    left: -20px;
     display: block;
-    width: 20%;
+    width: 280px;
     border-radius: 5px;
-    padding: 10px;
+    background-color: #fff;
+    padding: 50px 10px 20px 60px;
     margin: 0 auto;
     -webkit-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
-    -moz-box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
     box-shadow: 0px 0px 20px 3px rgba(0, 0, 0, 0.23);
 }
 
+.user-card-settings {
+    font-size: 14px;
+    color: #666;
+    border-top: 1px solid #e9e9e9;
+    padding-top: 20px;
+}
 
 .active .phone-number {
-    color: #0BCED0;
+    /*color: #dde640;*/
     font-family: 'Avenir-Black', arial, sans-serif;
     font-weight: bold;
 }
 
 .active .circle {
-    background-color: #0BCED0;   
+    background-color: #dde640;
 }
 
 .recordingDot {
@@ -153,7 +171,7 @@ button {
 
 .timerNumber {
     font-family: 'Avenir-Black', arial, sans-serif;
-    color: #0BCED0;
+    color: #dde640;
     font-size: 14px;
     outline: none;
     width: auto;
@@ -165,4 +183,32 @@ button {
 .micIcon {
     display: inline-block;
 
+}
+
+.voiceManipulation {
+    height: 40px;
+    line-height: 40px;
+    width: 160px;
+    background: transparent;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.voice-title {
+    height: 100%;
+    display: inline-block;
+    padding: 0 15px;
+    border-right: 1px solid #ccc;
+    color: #666;
+    font-family: 'Avenir-Black', arial, sans-serif;
+}
+
+select.field.is-grouped.volume-buttons {
+    background: transparent;
+    height: 38px;
+    width: 90px;
+    padding: 0;
+    border: none;
+    vertical-align: top;
+    color: #666;
 }

@@ -58,11 +58,6 @@
     align-items: center;
 }
 
-/* .caret {
-  margin-left: 5px;
-  color: rgba(0 ,0, 0, 0.4);
-  font-weight: bold;
-} */
 
 .caret {
     display: inline-block;
@@ -74,4 +69,13 @@
     border-top: 4px solid \9;
     border-right: 4px solid transparent;
     border-left: 4px solid transparent;
+}
+
+.navbar-user-bubble-arrow {
+    margin: 0 0 0 5px;
+    vertical-align: bottom;
+}
+
+.navbar-user-bubble-arrow img {
+    vertical-align: sub;
 }

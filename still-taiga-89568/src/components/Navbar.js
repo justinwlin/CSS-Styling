@@ -13,7 +13,7 @@ class Navbar extends Component {
             <a href="#">Notifications</a>
             <div className="navbar-dropdown">
               <div className="navbar-user-bubble">D</div>
-              <span className="caret" />
+              <span class="navbar-user-bubble-arrow"><img src={require('./images/arrow_down_mediumGray_12x8.svg')} /></span>
             </div>
           </div>
         </div>

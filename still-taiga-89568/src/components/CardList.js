@@ -5,6 +5,9 @@ import ParticipantCard from './Card';
 
 class CardList extends React.Component{
     constructor(props){
+
+        
+
         super(props)
         this.state = {
             robots: props.robots,

@@ -1,3 +1,7 @@
+* {
+    font-family: 'Avenir', arial, sans-serif;
+}
+
 h1 {
     font-family: 'Avenir';
     font-weight: 200;
@@ -10,6 +14,10 @@ hr {
     border-top: 1px solid #dde640;
     margin: 1em 0;
     padding: 0;
+}
+
+select {
+  font-family: 'Avenir', arial, sans-serif;
 }
 
 .buttons {
@@ -26,17 +34,27 @@ button {
   font-family: 'Avenir-Black', arial, sans-serif;
 }
 
+.buttons button:hover,
+.buttons .activeAnnouncement {
+  background-color: #dde640;
+  color: #fff;
+  border: 1px solid transparent;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  color: #666;
+  border: 1px solid #666;
+}
+
 #pass-button {
-    background-color: #0ccfcf;
-    border: 1px solid #20b5ba;
-    padding: 10px 20px;
-    color: white;
     margin-right: 20px;
 }
 
-#announcement-button {
-    color: #666;
-    border: 1px solid #666;
-    background-color: white;
-    padding: 10px 20px;
+.loading {
+  display: block;
+  color: #666;
+  font-size: 42px;
+  font-family: 'Avenir-Black', arial, sans-serif;
+  margin-top: 40px;
 }

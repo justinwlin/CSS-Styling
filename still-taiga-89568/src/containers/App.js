@@ -39,9 +39,20 @@ class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      timer: true
+      makingAnnouncement: false,
     }
   }
+
+  makeAnnouncement = () => {
+    this.setState({ makingAnnouncement: true });
+    // needs to be wired up to the actual phone announcement
+  }
+
+  stopAnnouncement = () => {
+    this.setState({ makingAnnouncement: false });
+    // needs to be wired up to the actual phone announcement
+  }
+
   componentDidMount() {
     this.props.onRequestRobots();
   }
@@ -60,6 +71,17 @@ class App extends Component {
     const filteredRobots = robots.filter(robot => {
       return robot.phone.includes(searchField);
     });
+
+
+    let makeAnnouncementBtn = <button className="button" id="announcement-button" onClick={this.makeAnnouncement}>
+                  Make an Announcement
+                </button>;
+    if (this.state.makingAnnouncement) {
+      makeAnnouncementBtn = <button className="button activeAnnouncement" id="announcement-button" onClick={this.stopAnnouncement}>
+                  Stop Announcing
+                </button>;
+    }
+
     return (
       <div className="tc">
         <Navbar />
@@ -74,15 +96,12 @@ class App extends Component {
             >
               Pass the Microphone
             </button>
-
-            <button className="button" id="announcement-button">
-              Make an Announcement
-            </button>
+            {makeAnnouncementBtn}
           </buttons>
         </div>
 
         {isPending ? (
-          <h1>Loading</h1>
+          <div class="loading">Loading callers...</div>
         ) : (
             <ErrorBoundry>
               <CardList robots={filteredRobots} speakerindex={speakerIndex} />

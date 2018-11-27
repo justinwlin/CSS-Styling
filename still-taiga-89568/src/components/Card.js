@@ -116,6 +116,8 @@ class ParticipantCard extends Component {
   toggle() {
     const { show } = this.state;
     this.setState({ show: !show });
+
+    // TODO: emit event to ClassList component to grey out the list background
   }
 
   toggleTimer() {
@@ -131,7 +133,7 @@ class ParticipantCard extends Component {
     if (isActiveSpeaker) {
       micAndTimer = <div class="micAndTimer">
             <div class="micIcon">
-              <img src={require('./images/mic_brightBlue.png')} />
+              <img src={require('./images/speaking_mic_lime.svg')} />
             </div>
             <div className = 'timerNumber'>
               <Timer initialTime={0}>
@@ -148,7 +150,14 @@ class ParticipantCard extends Component {
           <div className="phone-number">{this.state.phone}</div>
           <div class="filler-info">
             <div class="recordingDot"></div>
-            <span onClick={this.toggle} class="caret"></span>
+            <span onClick={this.toggle}>
+              {this.state.show ? (
+                  <img src={require('./images/arrow_up_darkGray.svg')} />
+                ) : (
+                  <img src={require('./images/arrow_down_darkGray.svg')} />
+                )
+              }
+            </span>
           </div>
         </div>
         {this.state.show && (
@@ -231,7 +240,7 @@ class Expand extends Component {
   render() {
     return (
       <div class="user-card">
-        <div>Participant {this.state.id} Setting</div>
+        <div class="user-card-settings">Participant settings:</div>
         <div className="columns">
           <field className="center">
             <div className="buttons">
@@ -243,16 +252,19 @@ class Expand extends Component {
           <div />
         </div>
 
-        <div className="field is-grouped volume-buttons" id="center">
-          <button className="volume-button" onClick={this.onChanceVoiceLow}>
-            Low
-          </button>
-          <button className="volume-button" onClick={this.onChanceVoiceNormal}>
-            Normal
-          </button>
-          <button className="volume-button" onClick={this.onChanceVoiceHigh}>
-            High
-          </button>
+        <div className="voiceManipulation">
+          <span class="voice-title">Voice</span>
+          <select className="field is-grouped volume-buttons">
+            <option className="volume-button" onClick={this.onChanceVoiceLow}>
+              Low
+            </option>
+            <option className="volume-button" onClick={this.onChanceVoiceNormal}>
+              Normal
+            </option>
+            <option className="volume-button" onClick={this.onChanceVoiceHigh}>
+              High
+            </option>
+          </select>
         </div>
       </div>
     );
